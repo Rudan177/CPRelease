@@ -1,27 +1,21 @@
-# ConcertPlay (CPD) — 发布仓库
+# ConcertPlay (CPD)
 
-ConcertPlay 是一个**本地优先的跨平台音乐播放与下载客户端**，支持 Linux / Windows / Android。
-本仓库仅存放各平台构建产物，不存放源代码。
+ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，支持 Linux / Android（Windows 版随后续版本提供）。
 
 - **应用名**：ConcertPlay
 - **简称**：CPD
 - **开发者**：ByRUDAN
-- **当前版本**：`0.1.19`（`0.1.19:01-BS19`）
-- **构建时间**：2026-11-05
+- **当前版本**：`0.1.21`（`0.1.21:01-BS33`）
 
----
+## 功能
 
-## 功能一览
-
-| 功能 | 说明 |
-|---|---|
-| 单曲 | 粘贴链接或搜索，识别封面与标题后直接播放或下载 |
-| 歌单 | 导入网易云 / QQ 音乐歌单，整单播放或下载 |
-| 播放 | 队列、随机、循环、音量、音质选择；播控面板从底部迷你条展开 |
-| 下载 | 进行中 / 已完成 / 失败统计、下载历史（最近 500 条）、终端日志面板 |
-| 元数据 | 写入 MP3（ID3v2.3）与 FLAC（Vorbis Comment）标签，支持内嵌封面 / 歌词 |
-| 设置 | 主题、主色、色彩风格、解析网关（内置默认值，开箱即用）、下载目录 |
-| 快捷键 | 桌面端 `Ctrl/⌘ + 1..4` 切换单曲 / 歌单 / 下载 / 设置 |
+- 单曲：粘贴链接或搜索，识别封面与标题后直接播放或下载
+- 歌单：导入网易云 / QQ 音乐歌单，整单播放或下载
+- 播放：队列、随机、循环、音量、音质选择；播控面板从底部迷你条展开
+- 下载：进行中 / 已完成 / 失败统计、下载历史（最近 500 条）、终端日志面板
+- 元数据：写入 MP3（ID3v2.3）与 FLAC（Vorbis Comment）标签，支持内嵌封面 / 歌词
+- 设置：主题、主色、色彩风格、解析网关（内置默认值，开箱即用）、下载目录
+- 快捷键：桌面端 `Ctrl/⌘ + 1..4` 切换单曲 / 歌单 / 下载 / 设置
 
 ### 音源支持
 
@@ -34,59 +28,31 @@ ConcertPlay 是一个**本地优先的跨平台音乐播放与下载客户端**�
 
 > 在线播放与下载依赖内置解析网关，安装后即可使用，无需手动配置。
 
----
-
-## 当前版本产物（v0.1.19）
+## 当前版本产物（v0.1.21）
 
 | 平台 | 文件 | 安装方式 |
 |---|---|---|
-| Linux | `concertplay_0.1.19_amd64.deb` | `sudo apt install ./concertplay_0.1.19_amd64.deb` |
-| Linux | `ConcertPlay-0.1.19-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.19-x86_64.AppImage && ./ConcertPlay-0.1.19-x86_64.AppImage` |
-| Android | `ConcertPlay-0.1.19-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.19-arm64-v8a.apk` |
-| Android | `ConcertPlay-0.1.19-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.19-universal.apk` |
+| Linux | `concertplay_0.1.21_amd64.deb` | `sudo apt install ./concertplay_0.1.21_amd64.deb` |
+| Linux | `ConcertPlay-0.1.21-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.21-x86_64.AppImage && ./ConcertPlay-0.1.21-x86_64.AppImage` |
+| Android | `ConcertPlay-0.1.21-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.21-arm64-v8a.apk` |
+| Android | `ConcertPlay-0.1.21-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.21-universal.apk` |
 
 > Linux 播放依赖系统 `libmpv`（Debian/Ubuntu：`sudo apt install libmpv2`）。
 
----
-
-## 本版本更新（v0.1.19）
+## 本版更新
 
 详见 [`CHANGELOG.md`](./CHANGELOG.md)
-
----
 
 ## 校验
 
 ```
-cbfff53fd2ea782a9a39449d0943bdaaf0838b400263b869cc59b5a4b2641f84  concertplay_0.1.19_amd64.deb
-67ae665ed1e957889ec9edca002c282c1e80f597cf1ab26c7952972a0a3ddfdc  ConcertPlay-0.1.19-x86_64.AppImage
-b580353462237c9ca1e153e7194ef7eac8aec1f48345f9dd8385a228def030c9  ConcertPlay-0.1.19-universal.apk
-37b7fa4c333d03166fd7117c4d75814d409553797f1143bd19b46ad6fe4f7803  ConcertPlay-0.1.19-arm64-v8a.apk
+57545bb35fe90c2f46264467c9f26c50662a7bb37b1aade8715dcab30286f69e  concertplay_0.1.21_amd64.deb
+98cb2b387c165251c2be7703ac86e93be3c9b7dbaf48c9105eaebd62d20390dd  ConcertPlay-0.1.21-x86_64.AppImage
+014887baa3fe2ddc432225fa9f1bed4f31b5503d91b339b0a601cd9496fb369a  ConcertPlay-0.1.21-universal.apk
+c7dfab90224abac6cde8fcf1bfd622c23a19391e40f209acd8b040120e9ac018  ConcertPlay-0.1.21-arm64-v8a.apk
 ```
 
 校验命令：`sha256sum -c`（Linux）/ `Get-FileHash`（Windows）
-
----
-
-## 旧版本
-
-各历史版本产物保留在 `archive-*` 子目录中：
-
-| 目录 | 版本 |
-|---|---|
-| `archive-0.1.18/` | 0.1.18 |
-| `archive-0.1.17/` | 0.1.17 |
-| `archive-0.1.16/` | 0.1.16 |
-| `archive-0.1.15/` | 0.1.15 |
-| `archive-0.1.14/` | 0.1.14 |
-| `archive-0.1.13/` | 0.1.13 |
-| `archive-0.1.12/` | 0.1.12 |
-| `archive-0.1.11/` | 0.1.11 |
-| `archive-0.1.10/` | 0.1.10 |
-| `archive-0.1.9/` | 0.1.9 |
-| `archive-0.1.8/` | 0.1.8 |
-
----
 
 ## 合规说明
 
