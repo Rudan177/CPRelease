@@ -17,11 +17,11 @@ ConcertPlay 是一个**本地优先的跨平台音乐播放与下载客户端**�
 |---|---|
 | 单曲 | 粘贴链接或搜索，识别封面与标题后直接播放或下载 |
 | 歌单 | 导入网易云 / QQ 音乐歌单，整单播放或下载 |
-| 播放 | 队列、随机、循环、音量、音质选择；播控面板从迷你条展开 |
+| 播放 | 队列、随机、循环、音量、音质选择；播控面板从底部迷你条展开 |
 | 下载 | 进行中 / 已完成 / 失败统计、下载历史（最近 500 条）、终端日志面板 |
-| 元数据 | 写入 MP3（ID3v2.3）与 FLAC（Vorbis Comment）标签，内嵌封面 / 歌词 |
-| 设置 | 主题、主色、色彩风格、解析网关、下载目录等 |
-| 快捷键 | 桌面端 `Ctrl/⌘ + 1..4` 切换页签 |
+| 元数据 | 写入 MP3（ID3v2.3）与 FLAC（Vorbis Comment）标签，支持内嵌封面 / 歌词 |
+| 设置 | 主题、主色、色彩风格、解析网关（内置默认值，开箱即用）、下载目录 |
+| 快捷键 | 桌面端 `Ctrl/⌘ + 1..4` 切换单曲 / 歌单 / 下载 / 设置 |
 
 ### 音源支持
 
@@ -32,7 +32,7 @@ ConcertPlay 是一个**本地优先的跨平台音乐播放与下载客户端**�
 | 酷我 / 酷狗 / 咪咕 / 汽水 / B 站 | ✅ | — | — |
 | 直链 | ✅ | — | — |
 
-> 在线播放与下载依赖内置解析网关（无需配置即可使用）。
+> 在线播放与下载依赖内置解析网关，安装后即可使用，无需手动配置。
 
 ---
 
@@ -45,29 +45,23 @@ ConcertPlay 是一个**本地优先的跨平台音乐播放与下载客户端**�
 | Android | `ConcertPlay-0.1.19-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.19-arm64-v8a.apk` |
 | Android | `ConcertPlay-0.1.19-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.19-universal.apk` |
 
-> 系统播放（Linux）依赖 `libmpv`（Debian/Ubuntu：`sudo apt install libmpv2`）。
-> Windows 产物随后续版本提供，当前 dist 目录中暂未收录 Windows 包。
+> Linux 播放依赖系统 `libmpv`（Debian/Ubuntu：`sudo apt install libmpv2`）。
 
 ---
 
 ## 本版本更新（v0.1.19）
 
-- 弹出菜单对齐 FlClash 最新版：24 圆角卡片、16 圆角行、20 号图标，补全按压 / 悬停 / 键盘焦点状态层
-- 菜单动画重写：从触发控件中心小圆点放大成卡片（platter 思路），支持减少动画
-- 液态玻璃菜单使用渐变发丝线，深色模式叠淡反光
-- 设置页选择行、下载操作条、歌单音质选择改为右侧药丸按钮（ElasticPress 弹簧缩放）
-- 修正歌单 Hero 飞行层圆角跳变问题
-- 优化播控返回动画：手机端淡出、桌面弹窗向侧边栏缩放，加入轻微压扁缓冲
+详见 [`CHANGELOG.md`](./CHANGELOG.md)
 
 ---
 
 ## 校验
 
 ```
-20e30d9eb5dd22694c3238d0521256831fa9affc5c92346473512132950690b1  concertplay_0.1.19_amd64.deb
-e9a4cc21e28145690b4e8b399ce2d9f85a780b382c7ef785728983c3c823ca2d  ConcertPlay-0.1.19-x86_64.AppImage
-4f4487bb2cde82c8f7199a241671d1756c0e92d6e883276c0347b5253bfb323c  ConcertPlay-0.1.19-universal.apk
-13c8113beb3e86a2f3258f63ba642a7bcefae8fd6185f47a00d0b47ed236f970  ConcertPlay-0.1.19-arm64-v8a.apk
+cbfff53fd2ea782a9a39449d0943bdaaf0838b400263b869cc59b5a4b2641f84  concertplay_0.1.19_amd64.deb
+67ae665ed1e957889ec9edca002c282c1e80f597cf1ab26c7952972a0a3ddfdc  ConcertPlay-0.1.19-x86_64.AppImage
+b580353462237c9ca1e153e7194ef7eac8aec1f48345f9dd8385a228def030c9  ConcertPlay-0.1.19-universal.apk
+37b7fa4c333d03166fd7117c4d75814d409553797f1143bd19b46ad6fe4f7803  ConcertPlay-0.1.19-arm64-v8a.apk
 ```
 
 校验命令：`sha256sum -c`（Linux）/ `Get-FileHash`（Windows）
