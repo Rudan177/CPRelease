@@ -1,0 +1,13 @@
+{
+  "version": "0.1.23",
+  "build": "01-BS35",
+  "versionName": "0.1.23:01-BS35",
+  "versionCode": 35,
+  "repository": "Rudan177/CPRelease",
+  "changelog": [
+    "新增应用内更新：设置页「更新」可直接检测新版本，读取 CPRelease 的 version.json 与最新 Release。",
+    "按平台自动匹配产物：Android 按 ABI 选择 APK，Linux 选择 AppImage（或 DEB），Windows/macOS 预留对应安装包。",
+    "下载进度实时显示；Android 下载后直接拉起系统安装程序，Linux 下载后自动赋予可执行权限并可在文件管理器中定位。",
+    "发布流程改为 GitHub Releases：安装包不再提交进仓库，版本说明与更新日志随 tag 一起发布。"
+  ]
+}

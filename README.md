@@ -5,7 +5,7 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 - **应用名**：ConcertPlay
 - **简称**：CPD
 - **开发者**：ByRUDAN
-- **当前版本**：`0.1.21`（`0.1.21:01-BS33`）
+- **当前版本**：`0.1.23`（`0.1.23:01-BS35`）
 
 ## 功能
 
@@ -28,16 +28,27 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 
 > 在线播放与下载依赖内置解析网关，安装后即可使用，无需手动配置。
 
-## 当前版本产物（v0.1.21）
+## 当前版本产物（v0.1.23）
+
+安装包统一发布在 [Releases](https://github.com/Rudan177/CPRelease/releases/latest)，仓库不再提交二进制文件。
 
 | 平台 | 文件 | 安装方式 |
 |---|---|---|
-| Linux | `concertplay_0.1.21_amd64.deb` | `sudo apt install ./concertplay_0.1.21_amd64.deb` |
-| Linux | `ConcertPlay-0.1.21-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.21-x86_64.AppImage && ./ConcertPlay-0.1.21-x86_64.AppImage` |
-| Android | `ConcertPlay-0.1.21-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.21-arm64-v8a.apk` |
-| Android | `ConcertPlay-0.1.21-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.21-universal.apk` |
+| Linux | `concertplay_0.1.23_amd64.deb` | `sudo apt install ./concertplay_0.1.23_amd64.deb` |
+| Linux | `ConcertPlay-0.1.23-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.23-x86_64.AppImage && ./ConcertPlay-0.1.23-x86_64.AppImage` |
+| Android | `ConcertPlay-0.1.23-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.23-arm64-v8a.apk` |
+| Android | `ConcertPlay-0.1.23-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.23-universal.apk` |
 
 > Linux 播放依赖系统 `libmpv`（Debian/Ubuntu：`sudo apt install libmpv2`）。
+
+## 应用内更新
+
+设置页「更新」会读取仓库根目录的 [`version.json`](./version.json) 与最新 Release：
+
+- 有新版本时展示更新日志，可直接下载当前平台对应的安装包
+- Android 按 ABI 选择 APK，下载完成后拉起系统安装程序
+- Linux 优先下载 AppImage（缺失时回退 DEB），下载后自动赋予可执行权限并可在文件管理器中定位
+- 下载进度实时显示，失败会保留可重试提示
 
 ## 本版更新
 
@@ -46,10 +57,10 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 ## 校验
 
 ```
-57545bb35fe90c2f46264467c9f26c50662a7bb37b1aade8715dcab30286f69e  concertplay_0.1.21_amd64.deb
-98cb2b387c165251c2be7703ac86e93be3c9b7dbaf48c9105eaebd62d20390dd  ConcertPlay-0.1.21-x86_64.AppImage
-014887baa3fe2ddc432225fa9f1bed4f31b5503d91b339b0a601cd9496fb369a  ConcertPlay-0.1.21-universal.apk
-c7dfab90224abac6cde8fcf1bfd622c23a19391e40f209acd8b040120e9ac018  ConcertPlay-0.1.21-arm64-v8a.apk
+f8ef045acd1a3ae607e1535211db80639cdcda84c76b585fbf2e055a356cc417  concertplay_0.1.23_amd64.deb
+6b447fd5d1bd4c9489b36fe9232594cb3d0548d1771a84505131c9cf19327f38  ConcertPlay-0.1.23-x86_64.AppImage
+ad55aa17a8daf6383d513c46951e05a519e736f88d82afed11233d26dec5f4e9  ConcertPlay-0.1.23-universal.apk
+82c2339a0246cdb5c48d2909b07f7bca7cb0c60db6faef9e42cfb2a9d59f46d3  ConcertPlay-0.1.23-arm64-v8a.apk
 ```
 
 校验命令：`sha256sum -c`（Linux）/ `Get-FileHash`（Windows）

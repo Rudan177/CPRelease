@@ -1,3 +1,13 @@
+# ConcertPlay 0.1.23（01-BS35）
+
+## 本版
+
+- 新增应用内更新：设置页「更新」读取本仓库的 `version.json` 与最新 Release，可直接检测并下载新版本。
+- 按平台匹配产物：Android 按 ABI 选择 APK，Linux 优先 AppImage（缺失回退 DEB），Windows / macOS 预留对应安装包。
+- 下载进度实时显示；Android 下载后拉起系统安装程序，Linux 下载后自动赋予可执行权限并可在文件管理器中定位。
+- 应用图标换成大圆角渐变底 + 黑色 CP 标识：Android 提供自适应前景 / 背景，Windows ICO 与 Linux hicolor 多尺寸同步更新。
+- 发布流程改为 GitHub Releases：安装包不再提交进仓库，版本说明与校验文件随 Release 一起发布。
+
 # ConcertPlay 0.1.21（01-BS33）
 
 ## 本版
