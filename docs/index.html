@@ -55,6 +55,23 @@
 </head>
 <body>
   <div id="loading"><div class="ring"></div></div>
+  <script>
+    // 旧版本 Service Worker 会把 index.html / main.dart.js 缓存住，
+    // 导致更新发布后仍加载旧代码，这里注销并清一次缓存。
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        regs.forEach(function (reg) { reg.unregister(); });
+      });
+      try {
+        if (window.caches && !localStorage.getItem('cp_sw_purged_v2')) {
+          caches.keys().then(function (keys) {
+            keys.forEach(function (key) { caches.delete(key); });
+          });
+          localStorage.setItem('cp_sw_purged_v2', '1');
+        }
+      } catch (e) {}
+    }
+  </script>
   <script src="flutter_bootstrap.js" async></script>
   <script>
     window.addEventListener('flutter-first-frame', function () {
