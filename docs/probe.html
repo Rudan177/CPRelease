@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>ConcertPlay 本地网关连通性测试</title>
+<style>
+body{font:14px/1.7 system-ui,sans-serif;background:#101114;color:#e6e6e6;padding:24px}
+button{padding:8px 14px;margin:4px 6px 12px 0;border-radius:8px;border:1px solid #333;background:#1b1d22;color:#e6e6e6}
+pre{background:#1b1d22;padding:12px;border-radius:8px;white-space:pre-wrap;word-break:break-all}
+.ok{color:#7ee787}.err{color:#ff7b72}
+</style>
+</head>
+<body>
+<h2>本地网关连通性测试</h2>
+<p>网关端口：<input id="port" value="8899" size="6"> 密钥：<input id="key" value="19890604"></p>
+<button onclick="probe()">GET /music/health</button>
+<button onclick="resolve()">POST /music/resolve-url</button>
+<pre id="out">等待测试…</pre>
+<script>
+const out = document.getElementById('out');
+const base = () => `http://127.0.0.1:${document.getElementById('port').value}`;
+const key = () => document.getElementById('key').value;
+
+function show(text, ok) {
+  out.textContent = text;
+  out.className = ok ? 'ok' : 'err';
+}
+
+async function probe() {
+  show('请求中…', true);
+  try {
+    const res = await fetch(`${base()}/music/health`, {
+      headers: { 'X-ConcertPlay-Key': key(), Accept: 'application/json' },
+    });
+    show(`HTTP ${res.status}\n${await res.text()}`, res.ok);
+  } catch (e) {
+    show(`FETCH 失败：${e.name}: ${e.message}\n（如果这里是 TypeError，说明被浏览器的本地网络权限或跨域策略拦截）`, false);
+  }
+}
+
+async function resolve() {
+  show('请求中…', true);
+  try {
+    const res = await fetch(`${base()}/music/resolve-url`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-ConcertPlay-Key': key() },
+      body: JSON.stringify({ source: 'wy', rid: '1974443814', level: 'lossless' }),
+    });
+    show(`HTTP ${res.status}\n${await res.text()}`, res.ok);
+  } catch (e) {
+    show(`FETCH 失败：${e.name}: ${e.message}`, false);
+  }
+}
+</script>
+</body>
+</html>
