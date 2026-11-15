@@ -5,7 +5,7 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 - **应用名**：ConcertPlay
 - **简称**：CPD
 - **开发者**：ByRUDAN
-- **当前版本**：`0.1.45`（`0.1.45:02-BS57`）
+- **当前版本**：`0.1.45`（`0.1.45:01-BS57`）
 
 ## 功能
 
@@ -40,7 +40,7 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 | Android | `ConcertPlay-0.1.45-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.45-universal.apk` |
 | Web | [rudan177.github.io/CPRelease](https://rudan177.github.io/CPRelease/) | 浏览器直接打开 |
 
-> 0.1.44 起 Android 使用新的签名密钥，已安装旧版本的用户需要先卸载再安装（`adb uninstall com.byrudan.concert_play`）。
+> 已知问题：0.1.44 起 Android 签名证书发生变更，仍在使用 0.1.43 及更早版本的用户暂时无法直接覆盖升级到新版。请勿卸载应用（卸载会丢失本地数据），请等待后续兼容版本。
 
 > Linux 播放依赖系统 `libmpv`（Debian/Ubuntu：`sudo apt install libmpv2`）。
 
