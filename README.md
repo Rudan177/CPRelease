@@ -5,7 +5,7 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 - **应用名**：ConcertPlay
 - **简称**：CPD
 - **开发者**：ByRUDAN
-- **当前版本**：`0.1.43`（`0.1.43:01-BS55`）
+- **当前版本**：`0.1.45`（`0.1.45:02-BS57`）
 
 ## 功能
 
@@ -28,16 +28,16 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 
 > 在线播放与下载依赖内置解析网关；桌面端打开「本地网关」后，浏览器与局域网设备也可借用这台电脑的网关密钥。
 
-## 当前版本产物（v0.1.44）
+## 当前版本产物（v0.1.45）
 
 安装包统一发布在 [Releases](https://github.com/Rudan177/CPRelease/releases/latest)，仓库不再提交二进制文件。
 
 | 平台 | 文件 | 安装方式 |
 |---|---|---|
-| Linux | `concertplay_0.1.44_amd64.deb` | `sudo apt install ./concertplay_0.1.44_amd64.deb` |
-| Linux | `ConcertPlay-0.1.44-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.44-x86_64.AppImage && ./ConcertPlay-0.1.44-x86_64.AppImage` |
-| Android | `ConcertPlay-0.1.44-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.44-arm64-v8a.apk` |
-| Android | `ConcertPlay-0.1.44-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.44-universal.apk` |
+| Linux | `concertplay_0.1.45_amd64.deb` | `sudo apt install ./concertplay_0.1.45_amd64.deb` |
+| Linux | `ConcertPlay-0.1.45-x86_64.AppImage` | `chmod +x ConcertPlay-0.1.45-x86_64.AppImage && ./ConcertPlay-0.1.45-x86_64.AppImage` |
+| Android | `ConcertPlay-0.1.45-arm64-v8a.apk` | `adb install -r ConcertPlay-0.1.45-arm64-v8a.apk` |
+| Android | `ConcertPlay-0.1.45-universal.apk`（通用，含全部 ABI） | `adb install -r ConcertPlay-0.1.45-universal.apk` |
 | Web | [rudan177.github.io/CPRelease](https://rudan177.github.io/CPRelease/) | 浏览器直接打开 |
 
 > 0.1.44 起 Android 使用新的签名密钥，已安装旧版本的用户需要先卸载再安装（`adb uninstall com.byrudan.concert_play`）。
@@ -67,10 +67,10 @@ ConcertPlay 是一个本地优先的跨平台音乐播放与下载客户端，�
 ## 校验
 
 ```
-6cda93b4d6d4aece801c48ce12d4f060c0fa2ab48683c7afbf65705dcc448c22  concertplay_0.1.44_amd64.deb
-cb5ae5c22bcf40b38e9ac6c44980fe95006dcb9eafb43ca46af677da85d2e605  ConcertPlay-0.1.44-x86_64.AppImage
-c5b10347418868464f6385c2752bc67bbff9e20fa02e06b597097d07adab147b  ConcertPlay-0.1.44-universal.apk
-9ea99e38bb3b98295cd3f3f85c963fb10c860d497de00b0d79f671a6198857ac  ConcertPlay-0.1.44-arm64-v8a.apk
+a451691aaa3cdcc9e4c678e944ebfb40c5bf0069115cf95ca45ca35f0fff76ae  concertplay_0.1.45_amd64.deb
+67a2ef5cd4ff37cc8435b86d3e7accf88f96ef655b47d08638940048518a145b  ConcertPlay-0.1.45-x86_64.AppImage
+94766fd49f07d19be8b42e01bd2907a83bafdd7d62f99a896df561b9a0e9508b  ConcertPlay-0.1.45-universal.apk
+fa5799cf831380397711053eb53b7228ab708177356fe09d3e05af62864da464  ConcertPlay-0.1.45-arm64-v8a.apk
 ```
 
 校验命令：`sha256sum -c`（Linux）/ `Get-FileHash`（Windows）
