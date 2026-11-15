@@ -8805,7 +8805,7 @@ case 4:s=5
 return A.k(A.kx(A.b([f.vu(),g.Gc(),c.G0()],t.mo),t.H),$async$wx)
 case 5:s=6
 return A.k(i.h8(),$async$wx)
-case 6:o.cm(0,B.be,"ConcertPlay 0.1.44 \u5df2\u542f\u52a8 \xb7 Web","app")
+case 6:o.cm(0,B.be,"ConcertPlay 0.1.45 \u5df2\u542f\u52a8 \xb7 Web","app")
 if(n.b.gS2())o.cm(0,B.d7,"\u89e3\u6790\u7f51\u5173\u914d\u7f6e\u5df2\u52a0\u8f7d","gateway")
 else o.cm(0,B.cx,"\u5c1a\u672a\u914d\u7f6e\u89e3\u6790\u7f51\u5173\uff0c\u5728\u7ebf\u64ad\u653e\u4e0e\u4e0b\u8f7d\u4e0d\u53ef\u7528","gateway")
 if($.a0==null)A.b9b()
@@ -55594,7 +55594,7 @@ s=6
 break
 case 4:p=3
 k=o.pop()
-m=A.b94(A.al(["version","0.1.44","build","02-BS56","versionName","0.1.44:02-BS56","versionCode",0,"repository","Rudan177/CPRelease","changelog",A.b([],t.s)],t.N,t.z))
+m=A.b94(A.al(["version","0.1.45","build","02-BS57","versionName","0.1.45:02-BS57","versionCode",0,"repository","Rudan177/CPRelease","changelog",A.b([],t.s)],t.N,t.z))
 q=m
 s=1
 break
@@ -55760,7 +55760,7 @@ $1(a){return A.b2l(this.a,a)},
 $S:18}
 A.a4o.prototype={
 B(a){var s=null,r=A.A(a).ax,q=A.cT(s,new A.bw(B.NU,17,r.c,s),B.u,s,s,new A.c8(r.b,s,s,s,A.cu(A.c0(9),B.q)),s,28,s,s,s,s,28),p=r.k3,o=A.ac("ConcertPlay",s,s,s,s,B.at.fa(a,!0).av(p),s,s),n=B.cZ.aW(a),m=r.rx,l=t.p
-return new A.ap(B.Uw,A.b2(A.b([q,B.eU,A.bz(A.aX(A.b([o,A.ac("CPD \xb7 v0.1.44",s,s,s,s,n.av((m==null?p:m).aj(0.6)),s,s)],l),B.T,B.i,B.Q),1)],l),B.p,B.i,B.l,0),s)}}
+return new A.ap(B.Uw,A.b2(A.b([q,B.eU,A.bz(A.aX(A.b([o,A.ac("CPD \xb7 v0.1.45",s,s,s,s,n.av((m==null?p:m).aj(0.6)),s,s)],l),B.T,B.i,B.Q),1)],l),B.p,B.i,B.l,0),s)}}
 A.Mi.prototype={
 a0(){return new A.a8a()},
 GC(a){return this.e.$1(a)}}
@@ -55816,7 +55816,7 @@ $0(){return this.a.d=!1},
 $S:0}
 A.abq.prototype={
 B(a){var s=null,r=A.A(a).ax,q=B.cZ.aW(a),p=r.rx,o=q.av((p==null?r.k3:p).aj(0.6))
-return new A.ap(B.Ux,A.b2(A.b([A.bz(A.ac("ByRUDAN",1,B.F,s,s,o,s,s),1),A.ac("0.1.44:02-BS56",s,s,s,s,o,s,s)],t.p),B.p,B.i,B.l,0),s)}}
+return new A.ap(B.Ux,A.b2(A.b([A.bz(A.ac("ByRUDAN",1,B.F,s,s,o,s,s),1),A.ac("0.1.45:02-BS57",s,s,s,s,o,s,s)],t.p),B.p,B.i,B.l,0),s)}}
 A.Py.prototype={
 l(){var s=this,r=s.bN$
 if(r!=null)r.N(s.gfG())
@@ -59626,7 +59626,7 @@ return A.k(q.r1(),$async$CK)
 case 2:return A.m(null,r)}})
 return A.n($async$CK,r)},
 agA(a,b){return new A.fB($.aZW(),new A.aEX(this,b),null,null,t.Qa)},
-B(a){var s,r,q,p,o=null,n="0.1.44:02-BS56",m=A.A(a).ax,l=A.c0(16),k=$.b1D?"assets/easter_egg.png":"assets/app_icon.png"
+B(a){var s,r,q,p,o=null,n="0.1.45:02-BS57",m=A.A(a).ax,l=A.c0(16),k=$.b1D?"assets/easter_egg.png":"assets/app_icon.png"
 l=A.xi(l,new A.y4(A.bkY(o,o,new A.CR(k,o,o)),o,o,52,52,B.n3,!1,o))
 k=m.k3
 s=A.ac("ConcertPlay",o,o,o,o,B.hx.fa(a,!0).av(k),o,o)
@@ -59656,7 +59656,7 @@ p=s==null?p.k3:s
 return A.dk(p,r,r,new A.bw(B.mR,20,r,r),r,r,q.gas4(),r,r,"\u68c0\u67e5\u66f4\u65b0",r)},
 $S:466}
 A.aF0.prototype={
-$0(){return A.btV("\xa9 "+A.v0(new A.cG(Date.now(),0,!1))+" ByRUDAN","ConcertPlay","0.1.44:02-BS56",this.a)},
+$0(){return A.btV("\xa9 "+A.v0(new A.cG(Date.now(),0,!1))+" ByRUDAN","ConcertPlay","0.1.45:02-BS57",this.a)},
 $S:0}
 A.AQ.prototype={
 B(a){var s=null,r=A.A(a).ax,q=r.k3,p=A.bz(A.ac(this.c,s,s,s,s,B.aR.aW(a).av(q),s,s),1),o=B.bF.aW(a),n=r.rx
